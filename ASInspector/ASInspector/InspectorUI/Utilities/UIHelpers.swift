@@ -10,6 +10,10 @@ import UIKit
 class UIHelpers {
   static let shared = UIHelpers()
   
+  var defaultBounds: CGRect {
+    UIScreen.main.bounds
+  }
+  
   var windowScenes: [UIWindowScene] {
     let windowScenes = UIApplication.shared.connectedScenes
       .filter { $0.activationState == .foregroundActive }
@@ -35,5 +39,14 @@ class UIHelpers {
   
   var keyWindow: UIWindow? {
     appWindows.first { $0.isKeyWindow }
+  }
+  
+  // Return current root view controller
+  var presentingViewController: UIViewController? {
+      var rootViewController = keyWindow?.rootViewController
+      while let controller = rootViewController?.presentedViewController {
+          rootViewController = controller
+      }
+      return rootViewController
   }
 }

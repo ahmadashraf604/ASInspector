@@ -8,7 +8,8 @@
 import UIKit
 
 class IconWindow: BaseWindow {
-  
+  private let uiHelpers: UIHelpers = .shared
+  private let uiManager: UIManager = .shared
   private lazy var showButton: UIButton = getShowButton()
   private let raduis: CGFloat = 50
   
@@ -16,19 +17,17 @@ class IconWindow: BaseWindow {
     fatalError("init(coder:) has not been implemented")
   }
   
-  init(
-    uiHelpers: UIHelpers = .shared
-  ) {
+  override init(frame: CGRect) {
+    super.init(frame: frame)
+  }
+  
+  override init() {
     let bounds = UIScreen.main.bounds
     let cornarRadias = raduis / 2
     let minX = bounds.size.width - raduis - 8
     let minY = (bounds.size.height / 2) - cornarRadias
     let frame = CGRect(x: minX, y: minY, width: raduis, height: raduis)
-    if let windowScene = uiHelpers.windowScene {
-      super.init(windowScene: windowScene)
-    } else {
-      super.init(frame: frame)
-    }
+    super.init()
     self.frame = frame
     backgroundColor = UIColor.clear
     windowLevel = UIWindow.Level(UIWindow.Level.alert.rawValue + 2)
@@ -38,8 +37,14 @@ class IconWindow: BaseWindow {
   }
   
   @objc private func showLoggerView() {
-    print("show")
+    UIManager.shared.presentUI()
   }
+  
+  weak var mainWindow: UIWindow?
+  override func becomeKey() {
+    super.becomeKey()
+    mainWindow?.makeKey()
+      }
 }
 
 // MARK: - Private Helpers

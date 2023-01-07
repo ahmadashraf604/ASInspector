@@ -47,6 +47,7 @@
 		5B03F1C9296A016600AB1C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B03F1C8296A016500AB1C7F /* Assets.xcassets */; };
 		5B03F1CB296A01D500AB1C7F /* AppImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1CA296A01D500AB1C7F /* AppImages.swift */; };
 		5B03F1CD296A067D00AB1C7F /* UIButton+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1CC296A067D00AB1C7F /* UIButton+Helpers.swift */; };
+		5B03F1D0296A08F500AB1C7F /* UIBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1CF296A08F500AB1C7F /* UIBaseTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		5B03F1C8296A016500AB1C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Utilities/Assets.xcassets; sourceTree = "<group>"; };
 		5B03F1CA296A01D500AB1C7F /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppImages.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Utilities/AppImages.swift; sourceTree = "<group>"; };
 		5B03F1CC296A067D00AB1C7F /* UIButton+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIButton+Helpers.swift"; path = "../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Extentions/UIButton+Helpers.swift"; sourceTree = "<group>"; };
+		5B03F1CF296A08F500AB1C7F /* UIBaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIBaseTabBarController.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Views/UIBaseTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -300,6 +302,7 @@
 		5B03F1B42969F98E00AB1C7F /* InspectorUI */ = {
 			isa = PBXGroup;
 			children = (
+				5B03F1CE296A08B800AB1C7F /* Views */,
 				5B03F1C52969FDE600AB1C7F /* Windows */,
 				5B03F1B82969FA0700AB1C7F /* Extentions */,
 				5B03F1B72969F9F700AB1C7F /* Utilities */,
@@ -337,6 +340,14 @@
 				5B03F1C62969FF4E00AB1C7F /* IconWindow.swift */,
 			);
 			path = Windows;
+			sourceTree = "<group>";
+		};
+		5B03F1CE296A08B800AB1C7F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B03F1CF296A08F500AB1C7F /* UIBaseTabBarController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -451,6 +462,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B03F1942969DF5200AB1C7F /* NotificationName+Names.swift in Sources */,
+				5B03F1D0296A08F500AB1C7F /* UIBaseTabBarController.swift in Sources */,
 				5B03F18A2969DEEA00AB1C7F /* NetworkConstants.swift in Sources */,
 				5B03F1C72969FF4E00AB1C7F /* IconWindow.swift in Sources */,
 				5B03F1692969DC9700AB1C7F /* FileMeta.swift in Sources */,
