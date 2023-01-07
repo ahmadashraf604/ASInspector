@@ -35,6 +35,7 @@
 		5B03F1AD2969E6A100AB1C7F /* ASURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1AC2969E6A100AB1C7F /* ASURLProtocol.swift */; };
 		5B03F1AF2969E6D600AB1C7F /* AuthenticationChallengeSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1AE2969E6D600AB1C7F /* AuthenticationChallengeSender.swift */; };
 		5B03F1B12969E75C00AB1C7F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1B02969E75C00AB1C7F /* NetworkManager.swift */; };
+		5B03F1B32969F90A00AB1C7F /* ASInspector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1B22969F90A00AB1C7F /* ASInspector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		5B03F1AC2969E6A100AB1C7F /* ASURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASURLProtocol.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Models/ASURLProtocol.swift; sourceTree = "<group>"; };
 		5B03F1AE2969E6D600AB1C7F /* AuthenticationChallengeSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationChallengeSender.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Models/AuthenticationChallengeSender.swift; sourceTree = "<group>"; };
 		5B03F1B02969E75C00AB1C7F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = ../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/NetworkManager.swift; sourceTree = "<group>"; };
+		5B03F1B22969F90A00AB1C7F /* ASInspector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASInspector.swift; path = ../../../AsInspector/ASInspector/ASInspector/ASInspector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		5B03F1232969DB5B00AB1C7F /* ASInspector */ = {
 			isa = PBXGroup;
 			children = (
+				5B03F1B22969F90A00AB1C7F /* ASInspector.swift */,
 				5B03F1872969DEC100AB1C7F /* NetworkInspector */,
 				5B03F1862969DEAF00AB1C7F /* CoreInspector */,
 				5B03F1242969DB5B00AB1C7F /* ASInspector.h */,
@@ -390,6 +393,7 @@
 				5B03F1A72969E46000AB1C7F /* UINetworkLogData.swift in Sources */,
 				5B03F1962969DF7D00AB1C7F /* Constants.swift in Sources */,
 				5B03F1A52969E26200AB1C7F /* NetworkLogData.swift in Sources */,
+				5B03F1B32969F90A00AB1C7F /* ASInspector.swift in Sources */,
 				5B03F1672969DC7200AB1C7F /* MIMEChecker.swift in Sources */,
 				5B03F1AF2969E6D600AB1C7F /* AuthenticationChallengeSender.swift in Sources */,
 				5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */,
