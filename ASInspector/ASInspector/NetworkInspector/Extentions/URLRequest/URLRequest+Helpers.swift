@@ -37,7 +37,7 @@ extension URLRequest {
       do {
         return try data.gunzipped()
       } catch let error as NSError {
-        print("[ASLogger] error: \(error.localizedDescription)")
+        print("error: \(error.localizedDescription)")
       }
     }
     return data

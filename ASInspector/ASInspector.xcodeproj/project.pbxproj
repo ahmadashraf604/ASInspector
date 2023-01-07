@@ -29,6 +29,12 @@
 		5B03F19E2969E0C500AB1C7F /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */; };
 		5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F19F2969E0FE00AB1C7F /* FileServiceContract.swift */; };
 		5B03F1A52969E26200AB1C7F /* NetworkLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1A42969E26200AB1C7F /* NetworkLogData.swift */; };
+		5B03F1A72969E46000AB1C7F /* UINetworkLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1A62969E46000AB1C7F /* UINetworkLogData.swift */; };
+		5B03F1A92969E5F600AB1C7F /* NetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1A82969E5F600AB1C7F /* NetworkInterceptor.swift */; };
+		5B03F1AB2969E62D00AB1C7F /* URLSessionConfiguration+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1AA2969E62D00AB1C7F /* URLSessionConfiguration+Helpers.swift */; };
+		5B03F1AD2969E6A100AB1C7F /* ASURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1AC2969E6A100AB1C7F /* ASURLProtocol.swift */; };
+		5B03F1AF2969E6D600AB1C7F /* AuthenticationChallengeSender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1AE2969E6D600AB1C7F /* AuthenticationChallengeSender.swift */; };
+		5B03F1B12969E75C00AB1C7F /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1B02969E75C00AB1C7F /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,12 @@
 		5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggerProtocol.swift; path = ../../../../../../AsInspector/ASInspector/ASInspector/CoreInspector/Managers/FileServices/LoggerProtocol.swift; sourceTree = "<group>"; };
 		5B03F19F2969E0FE00AB1C7F /* FileServiceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileServiceContract.swift; path = ../../../../../../AsInspector/ASInspector/ASInspector/CoreInspector/Managers/FileServices/FileServiceContract.swift; sourceTree = "<group>"; };
 		5B03F1A42969E26200AB1C7F /* NetworkLogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkLogData.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Models/NetworkLogData.swift; sourceTree = "<group>"; };
+		5B03F1A62969E46000AB1C7F /* UINetworkLogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UINetworkLogData.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Models/UINetworkLogData.swift; sourceTree = "<group>"; };
+		5B03F1A82969E5F600AB1C7F /* NetworkInterceptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkInterceptor.swift; path = ../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/NetworkInterceptor.swift; sourceTree = "<group>"; };
+		5B03F1AA2969E62D00AB1C7F /* URLSessionConfiguration+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "URLSessionConfiguration+Helpers.swift"; path = "../../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Extentions/URLRequest/URLSessionConfiguration+Helpers.swift"; sourceTree = "<group>"; };
+		5B03F1AC2969E6A100AB1C7F /* ASURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ASURLProtocol.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Models/ASURLProtocol.swift; sourceTree = "<group>"; };
+		5B03F1AE2969E6D600AB1C7F /* AuthenticationChallengeSender.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AuthenticationChallengeSender.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Models/AuthenticationChallengeSender.swift; sourceTree = "<group>"; };
+		5B03F1B02969E75C00AB1C7F /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkManager.swift; path = ../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +170,7 @@
 			children = (
 				5B03F1702969DCF500AB1C7F /* URLRequest+Helpers.swift */,
 				5B03F1762969DD4F00AB1C7F /* NSMutableURLRequest+Helpers.swift */,
+				5B03F1AA2969E62D00AB1C7F /* URLSessionConfiguration+Helpers.swift */,
 			);
 			path = URLRequest;
 			sourceTree = "<group>";
@@ -197,6 +210,8 @@
 				5B03F18E2969DF2D00AB1C7F /* Extentions */,
 				5B03F1882969DED700AB1C7F /* Utilities */,
 				5B03F1A32969E25000AB1C7F /* Models */,
+				5B03F1A82969E5F600AB1C7F /* NetworkInterceptor.swift */,
+				5B03F1B02969E75C00AB1C7F /* NetworkManager.swift */,
 			);
 			path = NetworkInspector;
 			sourceTree = "<group>";
@@ -249,6 +264,9 @@
 			isa = PBXGroup;
 			children = (
 				5B03F1A42969E26200AB1C7F /* NetworkLogData.swift */,
+				5B03F1A62969E46000AB1C7F /* UINetworkLogData.swift */,
+				5B03F1AC2969E6A100AB1C7F /* ASURLProtocol.swift */,
+				5B03F1AE2969E6D600AB1C7F /* AuthenticationChallengeSender.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -366,20 +384,26 @@
 				5B03F1942969DF5200AB1C7F /* NotificationName+Names.swift in Sources */,
 				5B03F18A2969DEEA00AB1C7F /* NetworkConstants.swift in Sources */,
 				5B03F1692969DC9700AB1C7F /* FileMeta.swift in Sources */,
+				5B03F1AD2969E6A100AB1C7F /* ASURLProtocol.swift in Sources */,
 				5B03F18D2969DF2100AB1C7F /* SessionState.swift in Sources */,
 				5B03F1712969DCF500AB1C7F /* URLRequest+Helpers.swift in Sources */,
+				5B03F1A72969E46000AB1C7F /* UINetworkLogData.swift in Sources */,
 				5B03F1962969DF7D00AB1C7F /* Constants.swift in Sources */,
 				5B03F1A52969E26200AB1C7F /* NetworkLogData.swift in Sources */,
 				5B03F1672969DC7200AB1C7F /* MIMEChecker.swift in Sources */,
+				5B03F1AF2969E6D600AB1C7F /* AuthenticationChallengeSender.swift in Sources */,
 				5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */,
 				5B03F19E2969E0C500AB1C7F /* LoggerProtocol.swift in Sources */,
+				5B03F1A92969E5F600AB1C7F /* NetworkInterceptor.swift in Sources */,
 				5B03F19B2969E05D00AB1C7F /* FileService.swift in Sources */,
+				5B03F1AB2969E62D00AB1C7F /* URLSessionConfiguration+Helpers.swift in Sources */,
 				5B03F1982969E02300AB1C7F /* AppUtilities.swift in Sources */,
 				5B03F16B2969DCAA00AB1C7F /* ContentType.swift in Sources */,
 				5B03F1732969DD1700AB1C7F /* Data+Helpers.swift in Sources */,
 				5B03F1922969DF5200AB1C7F /* Bundle+Helpers.swift in Sources */,
 				5B03F1752969DD3100AB1C7F /* DataSize.swift in Sources */,
 				5B03F16F2969DCD400AB1C7F /* GzipError.swift in Sources */,
+				5B03F1B12969E75C00AB1C7F /* NetworkManager.swift in Sources */,
 				5B03F1772969DD4F00AB1C7F /* NSMutableURLRequest+Helpers.swift in Sources */,
 				5B03F1932969DF5200AB1C7F /* DispatchQueue+Helpers.swift in Sources */,
 			);

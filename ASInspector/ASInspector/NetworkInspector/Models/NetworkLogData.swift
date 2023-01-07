@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class NetworkLogData: NSObject, LoggerProtocol {
+class NetworkLogData: NSObject, LoggerProtocol {  
   
   public let identifier: String
   public let urlRequest: URLRequest
@@ -16,9 +16,7 @@ public class NetworkLogData: NSObject, LoggerProtocol {
   internal(set) public var error: Error?
   internal(set) public var startTime: Date?
   internal var endTime: Date? { didSet { updateDuration() } }
-  public static var supportsSecureCoding: Bool {
-    true
-  }
+  
   internal(set) public var redirectRequest: URLRequest?
   /** Store Request state like running or completed.
    Not very reliable in some case it persist wrong value like in redirect case. */
@@ -42,6 +40,10 @@ public class NetworkLogData: NSObject, LoggerProtocol {
       return urlRequest.sniffMimeEnum()
     }
   }()
+  
+  @objc public static var supportsSecureCoding: Bool {
+    true
+  }
   
   init(identifier: String, request: URLRequest) {
     self.identifier = identifier

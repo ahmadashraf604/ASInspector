@@ -14,8 +14,8 @@ class FileService {
   
   init(fileManager: FileManager = .default) {
     self.fileManager = fileManager
-    let label = (Bundle.main.bundleIdentifier ?? "") + ".FileService"
-    self.queue = .init(label: label, qos: .userInteractive, attributes: .concurrent)
+    let queueLabel = (Bundle.main.bundleIdentifier ?? "") + ".FileService"
+    self.queue = .init(label: queueLabel, qos: .userInteractive, attributes: .concurrent)
   }
 }
 

@@ -10,9 +10,3 @@ import Foundation
 protocol LoggerProtocol: NSCoding, NSSecureCoding {
   var identifier: String { get }
 }
-
-extension LoggerProtocol {
-  static var supportsSecureCoding: Bool {
-    return true
-  }
-}
