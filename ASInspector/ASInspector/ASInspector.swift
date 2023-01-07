@@ -10,22 +10,27 @@ import Foundation
 public class ASInspector {
   public static let shared = ASInspector()
   private let networkManager: NetworkManager
-  private var isEnabled: Bool
+  private let uiManager: UIManager
+  private var _isEnabled: Bool
   
   init(
-    networkManager: NetworkManager = .shared
+    networkManager: NetworkManager = .shared,
+    uiManager: UIManager = .shared
   ) {
     self.networkManager = networkManager
-    isEnabled = false
+    self.uiManager = uiManager
+    self._isEnabled = false
   }
 }
 
 // MARK: - Public Helpers
 public extension ASInspector {
-  
-  func setEnable(_ enable: Bool) {
-    self.isEnabled = enable
-    enable ? enableLogger() : disableLogger()
+  var isEnable: Bool {
+    get { _isEnabled }
+    set {
+      _isEnabled = newValue
+      newValue ? enableLogger() : disableLogger()
+    }
   }
   
   func clearAll() {
@@ -37,9 +42,14 @@ public extension ASInspector {
 private extension ASInspector {
   func enableLogger() {
     networkManager.startLogging()
+    let deadline: DispatchTime = .now() + 1
+    DispatchQueue.main.asyncAfter(deadline: deadline) { [weak self] in
+      self?.uiManager.addLoggerButton()
+    }
   }
   
   func disableLogger() {
     networkManager.stopLogging()
+    uiManager.removeWindows()
   }
 }
