@@ -14,7 +14,7 @@ class FileService {
   
   init(fileManager: FileManager = .default) {
     self.fileManager = fileManager
-    let label = Bundle.main.bundleIdentifier + ".FileService"
+    let label = (Bundle.main.bundleIdentifier ?? "") + ".FileService"
     self.queue = .init(label: label, qos: .userInteractive, attributes: .concurrent)
   }
 }
@@ -71,12 +71,12 @@ private extension FileService {
     return logURL
   }
   
-  func getLogDirectory<T: Logger>(for type: T.Type) -> URL? {
+  func getLogDirectory<T: LoggerProtocol>(for type: T.Type) -> URL? {
     let typeName = String(describing: type)
     return getLogsDirectory(for: typeName)
   }
   
-  func getLogFileURL<T: Logger>(for type: T.Type, with logID: String) -> URL? {
+  func getLogFileURL<T: LoggerProtocol>(for type: T.Type, with logID: String) -> URL? {
     let typeName = String(describing: type)
     let fileName = getLogFileName(for: logID)
     return getLogsDirectory(for: typeName)?.appendingPathComponent(fileName)
@@ -134,8 +134,8 @@ private extension FileService {
 }
 
 // MARK: - IO Operation
-public extension FileService {
-  func saveLogsDataOnDisk<T: Logger>(_ logData: T, completion: (() -> Void)?) {
+extension FileService {
+  func saveLogsDataOnDisk<T: LoggerProtocol>(_ logData: T, completion: (() -> Void)?) {
     queue.async { [weak self] in
       defer { completion?() }
       guard let logFileURL = self?.getLogFileURL(for: T.self, with: logData.identifier) else { return }
@@ -148,7 +148,7 @@ public extension FileService {
     }
   }
   
-  func getLogData<T: Logger>(for logId: String, completion: @escaping (_ logData: T?) -> Void) {
+  func getLogData<T: LoggerProtocol>(for logId: String, completion: @escaping (_ logData: T?) -> Void) {
     queue.async { [weak self] in
       var logData: T?
       defer {

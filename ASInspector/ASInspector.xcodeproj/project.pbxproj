@@ -28,6 +28,7 @@
 		5B03F19B2969E05D00AB1C7F /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F19A2969E05D00AB1C7F /* FileService.swift */; };
 		5B03F19E2969E0C500AB1C7F /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */; };
 		5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F19F2969E0FE00AB1C7F /* FileServiceContract.swift */; };
+		5B03F1A52969E26200AB1C7F /* NetworkLogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1A42969E26200AB1C7F /* NetworkLogData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		5B03F19A2969E05D00AB1C7F /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
 		5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggerProtocol.swift; path = ../../../../../../AsInspector/ASInspector/ASInspector/CoreInspector/Managers/FileServices/LoggerProtocol.swift; sourceTree = "<group>"; };
 		5B03F19F2969E0FE00AB1C7F /* FileServiceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileServiceContract.swift; path = ../../../../../../AsInspector/ASInspector/ASInspector/CoreInspector/Managers/FileServices/FileServiceContract.swift; sourceTree = "<group>"; };
+		5B03F1A42969E26200AB1C7F /* NetworkLogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkLogData.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Models/NetworkLogData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +196,7 @@
 			children = (
 				5B03F18E2969DF2D00AB1C7F /* Extentions */,
 				5B03F1882969DED700AB1C7F /* Utilities */,
+				5B03F1A32969E25000AB1C7F /* Models */,
 			);
 			path = NetworkInspector;
 			sourceTree = "<group>";
@@ -240,6 +243,14 @@
 				5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */,
 			);
 			path = FileServices;
+			sourceTree = "<group>";
+		};
+		5B03F1A32969E25000AB1C7F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5B03F1A42969E26200AB1C7F /* NetworkLogData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -358,6 +369,7 @@
 				5B03F18D2969DF2100AB1C7F /* SessionState.swift in Sources */,
 				5B03F1712969DCF500AB1C7F /* URLRequest+Helpers.swift in Sources */,
 				5B03F1962969DF7D00AB1C7F /* Constants.swift in Sources */,
+				5B03F1A52969E26200AB1C7F /* NetworkLogData.swift in Sources */,
 				5B03F1672969DC7200AB1C7F /* MIMEChecker.swift in Sources */,
 				5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */,
 				5B03F19E2969E0C500AB1C7F /* LoggerProtocol.swift in Sources */,
