@@ -25,6 +25,9 @@
 		5B03F1942969DF5200AB1C7F /* NotificationName+Names.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1912969DF5200AB1C7F /* NotificationName+Names.swift */; };
 		5B03F1962969DF7D00AB1C7F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1952969DF7D00AB1C7F /* Constants.swift */; };
 		5B03F1982969E02300AB1C7F /* AppUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1972969E02300AB1C7F /* AppUtilities.swift */; };
+		5B03F19B2969E05D00AB1C7F /* FileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F19A2969E05D00AB1C7F /* FileService.swift */; };
+		5B03F19E2969E0C500AB1C7F /* LoggerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */; };
+		5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F19F2969E0FE00AB1C7F /* FileServiceContract.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +60,9 @@
 		5B03F1912969DF5200AB1C7F /* NotificationName+Names.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "NotificationName+Names.swift"; path = "../../../../../AsInspector/ASInspector/ASInspector/CoreInspector/Extentions/NotificationName+Names.swift"; sourceTree = "<group>"; };
 		5B03F1952969DF7D00AB1C7F /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../../../../../../AsInspector/ASInspector/ASInspector/CoreInspector/Utilities/Constans/Constants.swift; sourceTree = "<group>"; };
 		5B03F1972969E02300AB1C7F /* AppUtilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppUtilities.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/NetworkInspector/Utilities/AppUtilities.swift; sourceTree = "<group>"; };
+		5B03F19A2969E05D00AB1C7F /* FileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileService.swift; sourceTree = "<group>"; };
+		5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoggerProtocol.swift; path = ../../../../../../AsInspector/ASInspector/ASInspector/CoreInspector/Managers/FileServices/LoggerProtocol.swift; sourceTree = "<group>"; };
+		5B03F19F2969E0FE00AB1C7F /* FileServiceContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FileServiceContract.swift; path = ../../../../../../AsInspector/ASInspector/ASInspector/CoreInspector/Managers/FileServices/FileServiceContract.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +182,7 @@
 		5B03F1862969DEAF00AB1C7F /* CoreInspector */ = {
 			isa = PBXGroup;
 			children = (
+				5B03F1992969E05400AB1C7F /* Managers */,
 				5B03F1652969DC5000AB1C7F /* Extentions */,
 				5B03F1642969DC3A00AB1C7F /* Utilities */,
 			);
@@ -215,6 +222,24 @@
 				5B03F17B2969DD9800AB1C7F /* URLRequest */,
 			);
 			path = Extentions;
+			sourceTree = "<group>";
+		};
+		5B03F1992969E05400AB1C7F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				5B03F19C2969E09700AB1C7F /* FileServices */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		5B03F19C2969E09700AB1C7F /* FileServices */ = {
+			isa = PBXGroup;
+			children = (
+				5B03F19A2969E05D00AB1C7F /* FileService.swift */,
+				5B03F19F2969E0FE00AB1C7F /* FileServiceContract.swift */,
+				5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */,
+			);
+			path = FileServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +359,9 @@
 				5B03F1712969DCF500AB1C7F /* URLRequest+Helpers.swift in Sources */,
 				5B03F1962969DF7D00AB1C7F /* Constants.swift in Sources */,
 				5B03F1672969DC7200AB1C7F /* MIMEChecker.swift in Sources */,
+				5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */,
+				5B03F19E2969E0C500AB1C7F /* LoggerProtocol.swift in Sources */,
+				5B03F19B2969E05D00AB1C7F /* FileService.swift in Sources */,
 				5B03F1982969E02300AB1C7F /* AppUtilities.swift in Sources */,
 				5B03F16B2969DCAA00AB1C7F /* ContentType.swift in Sources */,
 				5B03F1732969DD1700AB1C7F /* Data+Helpers.swift in Sources */,
