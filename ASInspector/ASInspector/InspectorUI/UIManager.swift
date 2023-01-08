@@ -37,7 +37,7 @@ public extension UIManager {
     guard let rootViewController = uiHelper.presentingViewController,
     !rootViewController.isKind(of: UIBaseTabBarController.self)
     else { return }
-    let viewController = UIBaseTabBarController()
+    let viewController = UIBaseTabBarController(tabs: .networkLogs, .consoleLogs, .settings)
     viewController.modalPresentationStyle = .overFullScreen
     logWindow = BaseWindow()
     logWindow?.frame = uiHelper.defaultBounds
