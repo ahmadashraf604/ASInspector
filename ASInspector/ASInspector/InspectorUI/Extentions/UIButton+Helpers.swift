@@ -12,7 +12,7 @@ extension UIButton {
     forContentPadding contentPadding: UIEdgeInsets,
     imageTitlePadding: CGFloat = .zero
   ) {
-    if configuration != nil {
+    if #available(iOS 15, *) {
       configuration?.contentInsets = NSDirectionalEdgeInsets(insets: contentPadding)
     } else {
       contentEdgeInsets = UIEdgeInsets(
