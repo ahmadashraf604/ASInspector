@@ -10,7 +10,8 @@ import Foundation
 class NetworkManager {
   public static let shared = NetworkManager()
   private let fileService: FileService
-  private var logs: [UINetworkLogData] = []
+  
+  private(set) var logs: [UINetworkLogData] = []
   private let queue: DispatchQueue
   private let networkInterceptor: NetworkInterceptor
   

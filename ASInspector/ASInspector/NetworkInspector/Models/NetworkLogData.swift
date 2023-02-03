@@ -110,7 +110,7 @@ class NetworkLogData: NSObject, LoggerProtocol {
     // Milliseconds
     let ms = Int((timeInterval.truncatingRemainder(dividingBy: 1)) * 1000)
     
-    readableStr = "\(ms)ms"
+    readableStr = "\(ms) ms"
     /** Currently formatting in unnecessary
      // Seconds
      let s = Int(timeInterval) % 60

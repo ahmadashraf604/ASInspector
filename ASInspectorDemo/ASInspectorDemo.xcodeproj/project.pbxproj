@@ -15,6 +15,7 @@
 		5B03F1522969DB7100AB1C7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B03F1502969DB7100AB1C7F /* LaunchScreen.storyboard */; };
 		5B03F1612969DBF700AB1C7F /* ASInspector.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B03F1602969DBF700AB1C7F /* ASInspector.framework */; };
 		5B03F1622969DBF700AB1C7F /* ASInspector.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5B03F1602969DBF700AB1C7F /* ASInspector.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		5BB69400298C802D0083BECA /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB693FF298C802D0083BECA /* ViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,7 @@
 		5B03F1512969DB7100AB1C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B03F1532969DB7100AB1C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B03F1602969DBF700AB1C7F /* ASInspector.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ASInspector.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB693FF298C802D0083BECA /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +64,9 @@
 				5B03F1432969DB7000AB1C7F /* Products */,
 				5B03F15F2969DBF700AB1C7F /* Frameworks */,
 			);
+			indentWidth = 2;
 			sourceTree = "<group>";
+			tabWidth = 2;
 		};
 		5B03F1432969DB7000AB1C7F /* Products */ = {
 			isa = PBXGroup;
@@ -78,6 +82,7 @@
 				5B03F1452969DB7000AB1C7F /* AppDelegate.swift */,
 				5B03F1472969DB7000AB1C7F /* SceneDelegate.swift */,
 				5B03F1492969DB7000AB1C7F /* ViewController.swift */,
+				5BB693FF298C802D0083BECA /* ViewData.swift */,
 				5B03F14B2969DB7000AB1C7F /* Main.storyboard */,
 				5B03F14E2969DB7100AB1C7F /* Assets.xcassets */,
 				5B03F1502969DB7100AB1C7F /* LaunchScreen.storyboard */,
@@ -168,6 +173,7 @@
 			files = (
 				5B03F14A2969DB7000AB1C7F /* ViewController.swift in Sources */,
 				5B03F1462969DB7000AB1C7F /* AppDelegate.swift in Sources */,
+				5BB69400298C802D0083BECA /* ViewData.swift in Sources */,
 				5B03F1482969DB7000AB1C7F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

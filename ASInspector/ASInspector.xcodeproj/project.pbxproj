@@ -49,6 +49,20 @@
 		5B03F1CD296A067D00AB1C7F /* UIButton+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1CC296A067D00AB1C7F /* UIButton+Helpers.swift */; };
 		5B03F1D0296A08F500AB1C7F /* UIBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B03F1CF296A08F500AB1C7F /* UIBaseTabBarController.swift */; };
 		5B9CD38C296B4CD200346B4E /* Tabs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CD38B296B4CD200346B4E /* Tabs.swift */; };
+		5B9CD38F296B541D00346B4E /* NetworkLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CD38E296B541D00346B4E /* NetworkLogsViewController.swift */; };
+		5B9CD392296B544400346B4E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9CD391296B544400346B4E /* BaseViewController.swift */; };
+		5BB693F0298C79580083BECA /* NetworkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB693EE298C79580083BECA /* NetworkTableViewCell.swift */; };
+		5BB693F1298C79580083BECA /* NetworkTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB693EF298C79580083BECA /* NetworkTableViewCell.xib */; };
+		5BB693F3298C79700083BECA /* NetworkRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB693F2298C79700083BECA /* NetworkRepresentable.swift */; };
+		5BB693F7298C7A670083BECA /* UITableView+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB693F6298C7A670083BECA /* UITableView+Helpers.swift */; };
+		5BB693FA298C7B6E0083BECA /* Array+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB693F9298C7B6E0083BECA /* Array+Helpers.swift */; };
+		5BB693FC298C7C490083BECA /* BaseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB693FB298C7C490083BECA /* BaseTableViewCell.swift */; };
+		5BB693FE298C7EBC0083BECA /* Int+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB693FD298C7EBC0083BECA /* Int+Helpers.swift */; };
+		5BB69402298C83790083BECA /* BaseRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB69401298C83790083BECA /* BaseRootViewController.swift */; };
+		5BB69404298C84EA0083BECA /* BaseHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB69403298C84EA0083BECA /* BaseHeaderView.swift */; };
+		5BB69406298C96FD0083BECA /* NetworkLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB69405298C96FD0083BECA /* NetworkLogsViewController.xib */; };
+		5BB69408298C98130083BECA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB69407298C98130083BECA /* BaseNavigationController.swift */; };
+		5BB6940A298C9D5D0083BECA /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB69409298C9D5D0083BECA /* Date+Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,15 +110,29 @@
 		5B03F1B92969FA2300AB1C7F /* UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIHelpers.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Utilities/UIHelpers.swift; sourceTree = "<group>"; };
 		5B03F1BB2969FA5400AB1C7F /* AppColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppColors.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Utilities/AppColors.swift; sourceTree = "<group>"; };
 		5B03F1BD2969FAA800AB1C7F /* BaseWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWindow.swift; sourceTree = "<group>"; };
-		5B03F1BF2969FB3600AB1C7F /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+Helpers.swift"; path = "../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Extentions/UIView+Helpers.swift"; sourceTree = "<group>"; };
-		5B03F1C12969FBC600AB1C7F /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIEdgeInsets+Helpers.swift"; path = "../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Extentions/UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
-		5B03F1C32969FC0100AB1C7F /* String+UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "String+UIHelpers.swift"; path = "../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Extentions/String+UIHelpers.swift"; sourceTree = "<group>"; };
+		5B03F1BF2969FB3600AB1C7F /* UIView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Helpers.swift"; sourceTree = "<group>"; };
+		5B03F1C12969FBC600AB1C7F /* UIEdgeInsets+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIEdgeInsets+Helpers.swift"; sourceTree = "<group>"; };
+		5B03F1C32969FC0100AB1C7F /* String+UIHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+UIHelpers.swift"; sourceTree = "<group>"; };
 		5B03F1C62969FF4E00AB1C7F /* IconWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IconWindow.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Windows/IconWindow.swift; sourceTree = "<group>"; };
 		5B03F1C8296A016500AB1C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Utilities/Assets.xcassets; sourceTree = "<group>"; };
 		5B03F1CA296A01D500AB1C7F /* AppImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppImages.swift; path = ../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Utilities/AppImages.swift; sourceTree = "<group>"; };
-		5B03F1CC296A067D00AB1C7F /* UIButton+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIButton+Helpers.swift"; path = "../../../../../AsInspector/ASInspector/ASInspector/InspectorUI/Extentions/UIButton+Helpers.swift"; sourceTree = "<group>"; };
+		5B03F1CC296A067D00AB1C7F /* UIButton+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Helpers.swift"; sourceTree = "<group>"; };
 		5B03F1CF296A08F500AB1C7F /* UIBaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIBaseTabBarController.swift; sourceTree = "<group>"; };
 		5B9CD38B296B4CD200346B4E /* Tabs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tabs.swift; sourceTree = "<group>"; };
+		5B9CD38E296B541D00346B4E /* NetworkLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogsViewController.swift; sourceTree = "<group>"; };
+		5B9CD391296B544400346B4E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		5BB693EE298C79580083BECA /* NetworkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTableViewCell.swift; sourceTree = "<group>"; };
+		5BB693EF298C79580083BECA /* NetworkTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkTableViewCell.xib; sourceTree = "<group>"; };
+		5BB693F2298C79700083BECA /* NetworkRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRepresentable.swift; sourceTree = "<group>"; };
+		5BB693F6298C7A670083BECA /* UITableView+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Helpers.swift"; sourceTree = "<group>"; };
+		5BB693F9298C7B6E0083BECA /* Array+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Helpers.swift"; sourceTree = "<group>"; };
+		5BB693FB298C7C490083BECA /* BaseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTableViewCell.swift; sourceTree = "<group>"; };
+		5BB693FD298C7EBC0083BECA /* Int+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Helpers.swift"; sourceTree = "<group>"; };
+		5BB69401298C83790083BECA /* BaseRootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRootViewController.swift; sourceTree = "<group>"; };
+		5BB69403298C84EA0083BECA /* BaseHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseHeaderView.swift; sourceTree = "<group>"; };
+		5BB69405298C96FD0083BECA /* NetworkLogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkLogsViewController.xib; sourceTree = "<group>"; };
+		5BB69407298C98130083BECA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		5BB69409298C9D5D0083BECA /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +332,7 @@
 		5B03F1B42969F98E00AB1C7F /* InspectorUI */ = {
 			isa = PBXGroup;
 			children = (
+				5B9CD390296B543A00346B4E /* Bases */,
 				5B03F1CE296A08B800AB1C7F /* Views */,
 				5B03F1C52969FDE600AB1C7F /* Windows */,
 				5B03F1B82969FA0700AB1C7F /* Extentions */,
@@ -327,10 +356,8 @@
 		5B03F1B82969FA0700AB1C7F /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
-				5B03F1BF2969FB3600AB1C7F /* UIView+Helpers.swift */,
-				5B03F1C12969FBC600AB1C7F /* UIEdgeInsets+Helpers.swift */,
-				5B03F1C32969FC0100AB1C7F /* String+UIHelpers.swift */,
-				5B03F1CC296A067D00AB1C7F /* UIButton+Helpers.swift */,
+				5BB693F8298C7B590083BECA /* Core */,
+				5BB693F4298C7A430083BECA /* UIView */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -347,6 +374,8 @@
 		5B03F1CE296A08B800AB1C7F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5BB693E8298C549D0083BECA /* Network Cell */,
+				5B9CD38D296B53EA00346B4E /* NetworkLogsViewController */,
 				5B9CD38A296B4C8600346B4E /* TabBarController */,
 			);
 			path = Views;
@@ -359,6 +388,67 @@
 				5B9CD38B296B4CD200346B4E /* Tabs.swift */,
 			);
 			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		5B9CD38D296B53EA00346B4E /* NetworkLogsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5B9CD38E296B541D00346B4E /* NetworkLogsViewController.swift */,
+				5BB69405298C96FD0083BECA /* NetworkLogsViewController.xib */,
+			);
+			path = NetworkLogsViewController;
+			sourceTree = "<group>";
+		};
+		5B9CD390296B543A00346B4E /* Bases */ = {
+			isa = PBXGroup;
+			children = (
+				5B9CD391296B544400346B4E /* BaseViewController.swift */,
+				5BB69401298C83790083BECA /* BaseRootViewController.swift */,
+				5BB693FB298C7C490083BECA /* BaseTableViewCell.swift */,
+				5BB69403298C84EA0083BECA /* BaseHeaderView.swift */,
+				5BB69407298C98130083BECA /* BaseNavigationController.swift */,
+			);
+			path = Bases;
+			sourceTree = "<group>";
+		};
+		5BB693E8298C549D0083BECA /* Network Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5BB693F2298C79700083BECA /* NetworkRepresentable.swift */,
+				5BB693EE298C79580083BECA /* NetworkTableViewCell.swift */,
+				5BB693EF298C79580083BECA /* NetworkTableViewCell.xib */,
+			);
+			path = "Network Cell";
+			sourceTree = "<group>";
+		};
+		5BB693F4298C7A430083BECA /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				5B03F1C12969FBC600AB1C7F /* UIEdgeInsets+Helpers.swift */,
+				5BB693F5298C7A510083BECA /* UITableView */,
+				5B03F1BF2969FB3600AB1C7F /* UIView+Helpers.swift */,
+				5B03F1CC296A067D00AB1C7F /* UIButton+Helpers.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		5BB693F5298C7A510083BECA /* UITableView */ = {
+			isa = PBXGroup;
+			children = (
+				5BB693F6298C7A670083BECA /* UITableView+Helpers.swift */,
+			);
+			path = UITableView;
+			sourceTree = "<group>";
+		};
+		5BB693F8298C7B590083BECA /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5B03F1C32969FC0100AB1C7F /* String+UIHelpers.swift */,
+				5BB693F9298C7B6E0083BECA /* Array+Helpers.swift */,
+				5BB693FD298C7EBC0083BECA /* Int+Helpers.swift */,
+				5BB69409298C9D5D0083BECA /* Date+Helpers.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -420,6 +510,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
+				ORGANIZATIONNAME = Inspector;
 				TargetAttributes = {
 					5B03F1202969DB5B00AB1C7F = {
 						CreatedOnToolsVersion = 14.1;
@@ -454,7 +545,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB693F1298C79580083BECA /* NetworkTableViewCell.xib in Resources */,
 				5B03F1C9296A016600AB1C7F /* Assets.xcassets in Resources */,
+				5BB69406298C96FD0083BECA /* NetworkLogsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,22 +570,33 @@
 				5B03F18A2969DEEA00AB1C7F /* NetworkConstants.swift in Sources */,
 				5B03F1C72969FF4E00AB1C7F /* IconWindow.swift in Sources */,
 				5B03F1692969DC9700AB1C7F /* FileMeta.swift in Sources */,
+				5B9CD392296B544400346B4E /* BaseViewController.swift in Sources */,
 				5B9CD38C296B4CD200346B4E /* Tabs.swift in Sources */,
 				5B03F1AD2969E6A100AB1C7F /* ASURLProtocol.swift in Sources */,
 				5B03F18D2969DF2100AB1C7F /* SessionState.swift in Sources */,
+				5BB693F0298C79580083BECA /* NetworkTableViewCell.swift in Sources */,
+				5BB69402298C83790083BECA /* BaseRootViewController.swift in Sources */,
 				5B03F1712969DCF500AB1C7F /* URLRequest+Helpers.swift in Sources */,
 				5B03F1A72969E46000AB1C7F /* UINetworkLogData.swift in Sources */,
+				5BB693F7298C7A670083BECA /* UITableView+Helpers.swift in Sources */,
+				5BB69404298C84EA0083BECA /* BaseHeaderView.swift in Sources */,
+				5BB693FC298C7C490083BECA /* BaseTableViewCell.swift in Sources */,
 				5B03F1BA2969FA2300AB1C7F /* UIHelpers.swift in Sources */,
+				5BB693F3298C79700083BECA /* NetworkRepresentable.swift in Sources */,
+				5BB693FA298C7B6E0083BECA /* Array+Helpers.swift in Sources */,
 				5B03F1962969DF7D00AB1C7F /* Constants.swift in Sources */,
 				5B03F1BE2969FAA800AB1C7F /* BaseWindow.swift in Sources */,
 				5B03F1A52969E26200AB1C7F /* NetworkLogData.swift in Sources */,
 				5B03F1B32969F90A00AB1C7F /* ASInspector.swift in Sources */,
+				5BB693FE298C7EBC0083BECA /* Int+Helpers.swift in Sources */,
 				5B03F1CD296A067D00AB1C7F /* UIButton+Helpers.swift in Sources */,
 				5B03F1672969DC7200AB1C7F /* MIMEChecker.swift in Sources */,
 				5B03F1C02969FB3600AB1C7F /* UIView+Helpers.swift in Sources */,
 				5B03F1B62969F9C200AB1C7F /* UIManager.swift in Sources */,
 				5B03F1AF2969E6D600AB1C7F /* AuthenticationChallengeSender.swift in Sources */,
+				5B9CD38F296B541D00346B4E /* NetworkLogsViewController.swift in Sources */,
 				5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */,
+				5BB6940A298C9D5D0083BECA /* Date+Helpers.swift in Sources */,
 				5B03F19E2969E0C500AB1C7F /* LoggerProtocol.swift in Sources */,
 				5B03F1A92969E5F600AB1C7F /* NetworkInterceptor.swift in Sources */,
 				5B03F1BC2969FA5400AB1C7F /* AppColors.swift in Sources */,
@@ -502,6 +606,7 @@
 				5B03F1982969E02300AB1C7F /* AppUtilities.swift in Sources */,
 				5B03F1C42969FC0100AB1C7F /* String+UIHelpers.swift in Sources */,
 				5B03F16B2969DCAA00AB1C7F /* ContentType.swift in Sources */,
+				5BB69408298C98130083BECA /* BaseNavigationController.swift in Sources */,
 				5B03F1732969DD1700AB1C7F /* Data+Helpers.swift in Sources */,
 				5B03F1922969DF5200AB1C7F /* Bundle+Helpers.swift in Sources */,
 				5B03F1752969DD3100AB1C7F /* DataSize.swift in Sources */,

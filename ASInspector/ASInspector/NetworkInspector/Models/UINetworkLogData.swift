@@ -9,10 +9,10 @@ import Foundation
 
 class UINetworkLogData {
   var identifier: String
-  var title: String?
+  var url: String?
   var state: SessionState?
   var statusCode: Int?
-  var httpMethod: String?
+  var method: String?
   var duration: String?
   var startTime: Date?
   
@@ -24,16 +24,27 @@ class UINetworkLogData {
     self.init(identifier: logData.identifier)
     if let scheme = logData.urlRequest.url?.scheme,
        let host = logData.urlRequest.url?.host, let path = logData.urlRequest.url?.path {
-      self.title = "\(scheme)://\(host)\(path)"
+      self.url = "\(scheme)://\(host)\(path)"
     } else {
-      self.title = logData.urlRequest.url?.absoluteString ?? "No URL found"
+      self.url = logData.urlRequest.url?.absoluteString ?? "No URL found"
     }
-    self.httpMethod = logData.urlRequest.httpMethod
+    self.method = logData.urlRequest.httpMethod
     self.startTime = logData.startTime
     self.duration = logData.getDurationString()
     self.state = logData.state
     if let httpResponse = logData.response as? HTTPURLResponse {
       self.statusCode = httpResponse.statusCode
     }
+  }
+}
+
+// MARK: - UINetworkLogData + NetworkRepresentable
+extension UINetworkLogData: NetworkRepresentable {
+  var status: String? {
+    statusCode?.toString
+  }
+  
+  var date: String? {
+    startTime?.toString(with: .time)
   }
 }

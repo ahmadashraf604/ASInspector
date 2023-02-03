@@ -19,7 +19,7 @@ enum Tabs {
     switch self {
     case .networkLogs:
       tabBarItem = UITabBarItem(title: "Network", image: AppImages.internetIcon, selectedImage: nil)
-      viewController = UIViewController()
+      viewController = NetworkLogsViewController()
     case .consoleLogs:
       tabBarItem = UITabBarItem(title: "Console", image: AppImages.commandLineIcon, selectedImage: nil)
       viewController = UIViewController()
@@ -28,7 +28,7 @@ enum Tabs {
       viewController = UIViewController()
     }
     viewController.tabBarItem = tabBarItem
-    let navigationController = UINavigationController(rootViewController: viewController)
+    let navigationController = BaseNavigationController(rootViewController: viewController)
     return navigationController
   }
 }

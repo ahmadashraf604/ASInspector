@@ -14,6 +14,18 @@ class UIHelpers {
     UIScreen.main.bounds
   }
   
+  var statusBarHeight: CGFloat {
+    statusBarFrame?.height ?? .zero
+  }
+  
+  var statusBarFrame: CGRect? {
+    if #available(iOS 13.0, *) {
+      return keyWindow?.windowScene?.statusBarManager?.statusBarFrame
+    } else {
+      return UIApplication.shared.statusBarFrame
+    }
+  }
+  
   var windowScenes: [UIWindowScene] {
     let windowScenes = UIApplication.shared.connectedScenes
       .filter { $0.activationState == .foregroundActive }
@@ -48,5 +60,14 @@ class UIHelpers {
           rootViewController = controller
       }
       return rootViewController
+  }
+  
+  func getNavigationButton(image: UIImage?, imageInsets: UIEdgeInsets = UIEdgeInsets(top: 15, left: 25, bottom: 9, right: 5)) -> UIButton {
+    let customButton = UIButton()
+    customButton.tintColor = UIColor(red: 239/255.0, green: 239/255.0, blue: 239/255.0, alpha: 1)
+    customButton.imageView?.contentMode = .scaleAspectFit
+//    customButton.imageEdgeInsets = imageInsets
+    customButton.setImage(image, for: .normal)
+    return customButton
   }
 }

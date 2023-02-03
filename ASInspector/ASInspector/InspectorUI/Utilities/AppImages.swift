@@ -23,4 +23,12 @@ struct AppImages {
   static var commandLineIcon: UIImage? {
     UIImage(named: "command-line", in: Bundle.current, compatibleWith: nil)
   }
+  
+  static var backIcon: UIImage? {
+    UIImage(named: "back", in: Bundle.current, compatibleWith: nil)
+  }
+  
+  static var closeIcon: UIImage? {
+    UIImage(named: "close", in: Bundle.current, compatibleWith: nil)
+  }
 }
