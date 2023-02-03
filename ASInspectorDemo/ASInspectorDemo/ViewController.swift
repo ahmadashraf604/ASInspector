@@ -14,7 +14,11 @@ class ViewController: UIViewController {
     super.viewDidLoad()
     configureTableView()
     listData = [
-      .init(title: "Data - handler", action: dataHandler)
+      .init(title: "Data handler", action: clickedOnDataHandler),
+      .init(title: "Data Delegate", action: clickedOnDataDelegate),
+      .init(title: "Download handler", action: clickedOnDownloadHandler),
+      .init(title: "Download Delegate", action: clickedOnDownloadDelegate),
+      .init(title: "Download In background", action: clickedOnBackgroundDownload)
     ]
     tableView.reloadData()
   }
@@ -31,7 +35,7 @@ private extension ViewController {
 
 // MARK: - Handlers
 private extension ViewController {
-  func dataHandler() {
+  func clickedOnDataHandler() {
     let url = URL(string: "https://gorest.co.in/public-api/users?_format=json&access-token=Vy0X23HhPDdgNDNxVocmqv3NIkDTGdK93GfV")!
     
     var urlRequest: URLRequest = URLRequest(url: url)
@@ -55,6 +59,92 @@ private extension ViewController {
     session.dataTask(with: urlRequest) { (data, urlResponse, error) in
       print(error?.localizedDescription ?? "")
     }.resume()
+  }
+  
+  func clickedOnDataDelegate() {
+      let url = URL(string: "https://httpbin.org/get")!
+      let configuration = URLSessionConfiguration.ephemeral
+      let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+      
+      let task = session.dataTask(with: URLRequest(url: url))
+      task.resume()
+  }
+}
+
+// Download task
+extension ViewController {
+    
+    func clickedOnDownloadHandler() {
+      let url = URL(string: "https://source.unsplash.com/collection/400620/250x350")!
+      let configuration = URLSessionConfiguration.default
+      let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+      let task = session.downloadTask(with: url) { (fileUrl, response, error) in
+          print("Downloaded file url \(fileUrl?.absoluteString ?? "nil")")
+      }
+      task.resume()
+  }
+    
+    func clickedOnDownloadDelegate() {
+      let url = URL(string: "https://source.unsplash.com/collection/400620/250x350")!
+      let configuration = URLSessionConfiguration.default
+      let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+      let task = session.downloadTask(with: url)
+      task.resume()
+  }
+    
+    func clickedOnBackgroundDownload() {
+      let url = URL(string: "http://doanarae.com/doanarae/8880-5k-desktop-wallpaper_23842.jpg")!
+      let configuration = URLSessionConfiguration.background(withIdentifier: "com.\(UUID().uuidString)")
+      let session = URLSession(configuration: configuration, delegate: self, delegateQueue: nil)
+      let task = session.downloadTask(with: url)
+      task.resume()
+  }
+}
+
+// Upload task
+extension ViewController {
+    
+    func clickedOnUploadHandler() {
+      
+      let url = URL(string: "https://httpbin.org/post")!
+      var uploadURLRequest = URLRequest(url: url)
+      uploadURLRequest.httpMethod = "POST"
+      let configuration = URLSessionConfiguration.default
+      let session = URLSession(configuration: configuration)
+      
+      let uploadDict: [String: String] = [
+          "Mercedes": "Lewis Hamilton",
+          "Ferrari": "Sebastian Vettel",
+          "RedBull": "Daniel Ricciardo"
+      ]
+      
+      let uploadData = try? JSONEncoder().encode(uploadDict)
+      let jsonData = try? JSONSerialization.data(withJSONObject: uploadDict)
+      let uploadTask = session.uploadTask(with: uploadURLRequest, from: jsonData) { (receivedData, response, error) in
+        print(error?.localizedDescription ?? "")
+      }
+      uploadTask.resume()
+  }
+    
+    func clickedOnUploadDelegate() {
+      
+      let url = URL(string: "https://httpbin.org/post")!
+      var uploadURLRequest = URLRequest(url: url)
+      uploadURLRequest.httpMethod = "POST"
+      let configuration = URLSessionConfiguration.default
+      let session = URLSession(configuration: configuration)
+      
+      let uploadDict: [String: String] = [
+          "Mercedes": "Lewis Hamilton",
+          "Ferrari": "Sebastian Vettel",
+          "RedBull": "Daniel Ricciardo"
+      ]
+      
+      let jsonData = try? JSONSerialization.data(withJSONObject: uploadDict)
+      uploadURLRequest.httpBody = jsonData
+      
+      let task = session.dataTask(with: uploadURLRequest)
+      task.resume()
   }
 }
 
@@ -86,4 +176,22 @@ extension ViewController: UITableViewDataSource {
     return cell
   }
 }
+
+// MARK: - URLSessionDelegate
+extension ViewController: URLSessionDelegate {
+    
+    public func urlSession(_ session: URLSession, didBecomeInvalidWithError error: Error?) {
+        print(#function)
+    }
+    
+    public func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
+        print(#function)
+        completionHandler(.performDefaultHandling, nil)
+    }
+    
+    public func urlSessionDidFinishEvents(forBackgroundURLSession session: URLSession) {
+        print(#function)
+    }
+}
+
 
