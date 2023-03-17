@@ -25,6 +25,7 @@ public class ASInspector {
 
 // MARK: - Public Helpers
 public extension ASInspector {
+  /// Enable and Disable logs
   var isEnable: Bool {
     get { _isEnabled }
     set {
