@@ -118,7 +118,7 @@ extension ViewController {
           "RedBull": "Daniel Ricciardo"
       ]
       
-      let uploadData = try? JSONEncoder().encode(uploadDict)
+      // let uploadData = try? JSONEncoder().encode(uploadDict)
       let jsonData = try? JSONSerialization.data(withJSONObject: uploadDict)
       let uploadTask = session.uploadTask(with: uploadURLRequest, from: jsonData) { (receivedData, response, error) in
         print(error?.localizedDescription ?? "")
