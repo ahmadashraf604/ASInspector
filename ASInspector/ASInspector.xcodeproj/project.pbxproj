@@ -374,8 +374,8 @@
 		5B03F1CE296A08B800AB1C7F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5BB693E8298C549D0083BECA /* Network Cell */,
-				5B9CD38D296B53EA00346B4E /* NetworkLogsViewController */,
+				5BE6AF6029C52D7F008B5EB0 /* ConsoleLogsViewController */,
+				5BE6AF6129C52DA7008B5EB0 /* Networking */,
 				5B9CD38A296B4C8600346B4E /* TabBarController */,
 			);
 			path = Views;
