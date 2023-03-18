@@ -38,9 +38,10 @@ class BaseWindow: UIWindow {
     makeKeyAndVisible()
     let presentTransition = CATransition()
     presentTransition.duration = 0.37
-    presentTransition.timingFunction = CAMediaTimingFunction(name: .easeOut)
-    presentTransition.type = .moveIn
-    presentTransition.subtype = .fromTop
+    // TODO: - [Ashraf] Fix Present Transitition
+//    presentTransition.timingFunction = CAMediaTimingFunction(name: .easeOut)
+//    presentTransition.type = .moveIn
+//    presentTransition.subtype = .fromTop
     layer.add(presentTransition, forKey: kCATransition)
   }
   
