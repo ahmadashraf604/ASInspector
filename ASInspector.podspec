@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "ASInspector"
-    s.version      = "0.1.0"
+    s.version      = "0.1.2"
     s.summary      = "Network Logger and Console Logger"
     s.description  = <<-DESC 
     ASInspector is simple and extensible logger. It makes easy to log network request and response on file, Xcode console or send log to servers. It provides user friendly UI for debugging and testing purpose. 
@@ -19,12 +19,12 @@ Pod::Spec.new do |s|
     s.swift_version = '5.0'
     s.ios.deployment_target = "11.0"
     s.source       = { :git => "https://github.com/ahmadashraf604/ASInspector.git", :tag => "v#{s.version}" }
-  
+
     s.source_files  = "ASInspector/ASInspector/**/*.swift"
-    s.resources = "ASInspector/ASInspector/InspectorUI/**/*.{xcassets,storyboard,xib}"
+    s.resources = "ASInspector/ASInspector/InspectorUI/**/*.{xcassets,storyboard,xib,xcdatamodeld,xcdatamodel}"
   
     s.requires_arc = true
   
-    s.frameworks = 'WebKit'
+    s.frameworks = 'CoreData'
   end
   
