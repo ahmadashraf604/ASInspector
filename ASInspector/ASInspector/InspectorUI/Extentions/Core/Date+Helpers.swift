@@ -11,6 +11,7 @@ import Foundation
 // MARK: - Date + helpers
 enum DateFormat: String {
   case time = "hh:mm:ss a"
+  case date = "MM-dd-yyyy"
 }
 
 extension Date {

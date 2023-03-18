@@ -63,6 +63,17 @@
 		5BB69406298C96FD0083BECA /* NetworkLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BB69405298C96FD0083BECA /* NetworkLogsViewController.xib */; };
 		5BB69408298C98130083BECA /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB69407298C98130083BECA /* BaseNavigationController.swift */; };
 		5BB6940A298C9D5D0083BECA /* Date+Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB69409298C9D5D0083BECA /* Date+Helpers.swift */; };
+		5BE6AF6429C52DCC008B5EB0 /* ConsoleLogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF6229C52DCC008B5EB0 /* ConsoleLogsViewController.swift */; };
+		5BE6AF6529C52DCC008B5EB0 /* ConsoleLogsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE6AF6329C52DCC008B5EB0 /* ConsoleLogsViewController.xib */; };
+		5BE6AF6929C52F02008B5EB0 /* ASInspector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF6729C52F02008B5EB0 /* ASInspector.xcdatamodeld */; };
+		5BE6AF6D29C52F89008B5EB0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF6C29C52F89008B5EB0 /* CoreDataManager.swift */; };
+		5BE6AF6F29C53020008B5EB0 /* FileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF6E29C53020008B5EB0 /* FileExtension.swift */; };
+		5BE6AF7129C53080008B5EB0 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF7029C53080008B5EB0 /* Logger.swift */; };
+		5BE6AF7429C5344A008B5EB0 /* LogData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF7329C5344A008B5EB0 /* LogData.swift */; };
+		5BE6AF7629C5345B008B5EB0 /* LogLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF7529C5345B008B5EB0 /* LogLevel.swift */; };
+		5BE6AF7829C534B0008B5EB0 /* LoggerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF7729C534B0008B5EB0 /* LoggerManager.swift */; };
+		5BE6AF7C29C538C6008B5EB0 /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE6AF7A29C538C6008B5EB0 /* LogTableViewCell.swift */; };
+		5BE6AF7D29C538C6008B5EB0 /* LogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BE6AF7B29C538C6008B5EB0 /* LogTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -133,6 +144,17 @@
 		5BB69405298C96FD0083BECA /* NetworkLogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NetworkLogsViewController.xib; sourceTree = "<group>"; };
 		5BB69407298C98130083BECA /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		5BB69409298C9D5D0083BECA /* Date+Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helpers.swift"; sourceTree = "<group>"; };
+		5BE6AF6229C52DCC008B5EB0 /* ConsoleLogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLogsViewController.swift; sourceTree = "<group>"; };
+		5BE6AF6329C52DCC008B5EB0 /* ConsoleLogsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConsoleLogsViewController.xib; sourceTree = "<group>"; };
+		5BE6AF6829C52F02008B5EB0 /* ASInspector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ASInspector.xcdatamodel; sourceTree = "<group>"; };
+		5BE6AF6C29C52F89008B5EB0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		5BE6AF6E29C53020008B5EB0 /* FileExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileExtension.swift; sourceTree = "<group>"; };
+		5BE6AF7029C53080008B5EB0 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		5BE6AF7329C5344A008B5EB0 /* LogData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogData.swift; sourceTree = "<group>"; };
+		5BE6AF7529C5345B008B5EB0 /* LogLevel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogLevel.swift; sourceTree = "<group>"; };
+		5BE6AF7729C534B0008B5EB0 /* LoggerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggerManager.swift; sourceTree = "<group>"; };
+		5BE6AF7A29C538C6008B5EB0 /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
+		5BE6AF7B29C538C6008B5EB0 /* LogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LogTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,10 +200,12 @@
 			isa = PBXGroup;
 			children = (
 				5B03F1B22969F90A00AB1C7F /* ASInspector.swift */,
+				5BE6AF6629C52EC2008B5EB0 /* LogsInspector */,
 				5B03F1872969DEC100AB1C7F /* NetworkInspector */,
 				5B03F1862969DEAF00AB1C7F /* CoreInspector */,
 				5B03F1B42969F98E00AB1C7F /* InspectorUI */,
 				5B03F1242969DB5B00AB1C7F /* ASInspector.h */,
+				5BE6AF6729C52F02008B5EB0 /* ASInspector.xcdatamodeld */,
 			);
 			path = ASInspector;
 			sourceTree = "<group>";
@@ -303,6 +327,7 @@
 		5B03F1992969E05400AB1C7F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				5BE6AF6B29C52F80008B5EB0 /* CoreData */,
 				5B03F19C2969E09700AB1C7F /* FileServices */,
 			);
 			path = Managers;
@@ -314,6 +339,7 @@
 				5B03F19A2969E05D00AB1C7F /* FileService.swift */,
 				5B03F19F2969E0FE00AB1C7F /* FileServiceContract.swift */,
 				5B03F19D2969E0C500AB1C7F /* LoggerProtocol.swift */,
+				5BE6AF6E29C53020008B5EB0 /* FileExtension.swift */,
 			);
 			path = FileServices;
 			sourceTree = "<group>";
@@ -451,6 +477,61 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		5BE6AF6029C52D7F008B5EB0 /* ConsoleLogsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5BE6AF7929C538AB008B5EB0 /* LogsCell */,
+				5BE6AF6229C52DCC008B5EB0 /* ConsoleLogsViewController.swift */,
+				5BE6AF6329C52DCC008B5EB0 /* ConsoleLogsViewController.xib */,
+			);
+			path = ConsoleLogsViewController;
+			sourceTree = "<group>";
+		};
+		5BE6AF6129C52DA7008B5EB0 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				5BB693E8298C549D0083BECA /* Network Cell */,
+				5B9CD38D296B53EA00346B4E /* NetworkLogsViewController */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		5BE6AF6629C52EC2008B5EB0 /* LogsInspector */ = {
+			isa = PBXGroup;
+			children = (
+				5BE6AF7229C5343F008B5EB0 /* Models */,
+				5BE6AF7729C534B0008B5EB0 /* LoggerManager.swift */,
+			);
+			path = LogsInspector;
+			sourceTree = "<group>";
+		};
+		5BE6AF6B29C52F80008B5EB0 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5BE6AF6C29C52F89008B5EB0 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5BE6AF7229C5343F008B5EB0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5BE6AF7029C53080008B5EB0 /* Logger.swift */,
+				5BE6AF7329C5344A008B5EB0 /* LogData.swift */,
+				5BE6AF7529C5345B008B5EB0 /* LogLevel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5BE6AF7929C538AB008B5EB0 /* LogsCell */ = {
+			isa = PBXGroup;
+			children = (
+				5BE6AF7A29C538C6008B5EB0 /* LogTableViewCell.swift */,
+				5BE6AF7B29C538C6008B5EB0 /* LogTableViewCell.xib */,
+			);
+			path = LogsCell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -546,6 +627,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BB693F1298C79580083BECA /* NetworkTableViewCell.xib in Resources */,
+				5BE6AF7D29C538C6008B5EB0 /* LogTableViewCell.xib in Resources */,
+				5BE6AF6529C52DCC008B5EB0 /* ConsoleLogsViewController.xib in Resources */,
 				5B03F1C9296A016600AB1C7F /* Assets.xcassets in Resources */,
 				5BB69406298C96FD0083BECA /* NetworkLogsViewController.xib in Resources */,
 			);
@@ -565,6 +648,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE6AF6D29C52F89008B5EB0 /* CoreDataManager.swift in Sources */,
 				5B03F1942969DF5200AB1C7F /* NotificationName+Names.swift in Sources */,
 				5B03F1D0296A08F500AB1C7F /* UIBaseTabBarController.swift in Sources */,
 				5B03F18A2969DEEA00AB1C7F /* NetworkConstants.swift in Sources */,
@@ -574,12 +658,14 @@
 				5B9CD38C296B4CD200346B4E /* Tabs.swift in Sources */,
 				5B03F1AD2969E6A100AB1C7F /* ASURLProtocol.swift in Sources */,
 				5B03F18D2969DF2100AB1C7F /* SessionState.swift in Sources */,
+				5BE6AF7C29C538C6008B5EB0 /* LogTableViewCell.swift in Sources */,
 				5BB693F0298C79580083BECA /* NetworkTableViewCell.swift in Sources */,
 				5BB69402298C83790083BECA /* BaseRootViewController.swift in Sources */,
 				5B03F1712969DCF500AB1C7F /* URLRequest+Helpers.swift in Sources */,
 				5B03F1A72969E46000AB1C7F /* UINetworkLogData.swift in Sources */,
 				5BB693F7298C7A670083BECA /* UITableView+Helpers.swift in Sources */,
 				5BB69404298C84EA0083BECA /* BaseHeaderView.swift in Sources */,
+				5BE6AF7629C5345B008B5EB0 /* LogLevel.swift in Sources */,
 				5BB693FC298C7C490083BECA /* BaseTableViewCell.swift in Sources */,
 				5B03F1BA2969FA2300AB1C7F /* UIHelpers.swift in Sources */,
 				5BB693F3298C79700083BECA /* NetworkRepresentable.swift in Sources */,
@@ -592,7 +678,10 @@
 				5B03F1CD296A067D00AB1C7F /* UIButton+Helpers.swift in Sources */,
 				5B03F1672969DC7200AB1C7F /* MIMEChecker.swift in Sources */,
 				5B03F1C02969FB3600AB1C7F /* UIView+Helpers.swift in Sources */,
+				5BE6AF7829C534B0008B5EB0 /* LoggerManager.swift in Sources */,
+				5BE6AF7429C5344A008B5EB0 /* LogData.swift in Sources */,
 				5B03F1B62969F9C200AB1C7F /* UIManager.swift in Sources */,
+				5BE6AF6429C52DCC008B5EB0 /* ConsoleLogsViewController.swift in Sources */,
 				5B03F1AF2969E6D600AB1C7F /* AuthenticationChallengeSender.swift in Sources */,
 				5B9CD38F296B541D00346B4E /* NetworkLogsViewController.swift in Sources */,
 				5B03F1A02969E0FE00AB1C7F /* FileServiceContract.swift in Sources */,
@@ -603,10 +692,13 @@
 				5B03F19B2969E05D00AB1C7F /* FileService.swift in Sources */,
 				5B03F1AB2969E62D00AB1C7F /* URLSessionConfiguration+Helpers.swift in Sources */,
 				5B03F1CB296A01D500AB1C7F /* AppImages.swift in Sources */,
+				5BE6AF6929C52F02008B5EB0 /* ASInspector.xcdatamodeld in Sources */,
 				5B03F1982969E02300AB1C7F /* AppUtilities.swift in Sources */,
 				5B03F1C42969FC0100AB1C7F /* String+UIHelpers.swift in Sources */,
 				5B03F16B2969DCAA00AB1C7F /* ContentType.swift in Sources */,
 				5BB69408298C98130083BECA /* BaseNavigationController.swift in Sources */,
+				5BE6AF7129C53080008B5EB0 /* Logger.swift in Sources */,
+				5BE6AF6F29C53020008B5EB0 /* FileExtension.swift in Sources */,
 				5B03F1732969DD1700AB1C7F /* Data+Helpers.swift in Sources */,
 				5B03F1922969DF5200AB1C7F /* Bundle+Helpers.swift in Sources */,
 				5B03F1752969DD3100AB1C7F /* DataSize.swift in Sources */,
@@ -877,6 +969,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5BE6AF6729C52F02008B5EB0 /* ASInspector.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5BE6AF6829C52F02008B5EB0 /* ASInspector.xcdatamodel */,
+			);
+			currentVersion = 5BE6AF6829C52F02008B5EB0 /* ASInspector.xcdatamodel */;
+			path = ASInspector.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 5B03F1182969DB5B00AB1C7F /* Project object */;
 }

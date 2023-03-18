@@ -6,19 +6,26 @@
 //
 
 import UIKit
+import ASInspector
 
 class ViewController: UIViewController {
   @IBOutlet private weak var tableView: UITableView!
-  private var listData: [ViewData] = []
+  private var listData: [ViewSectionData] = []
   override func viewDidLoad() {
     super.viewDidLoad()
     configureTableView()
     listData = [
-      .init(title: "Data handler", action: clickedOnDataHandler),
-      .init(title: "Data Delegate", action: clickedOnDataDelegate),
-      .init(title: "Download handler", action: clickedOnDownloadHandler),
-      .init(title: "Download Delegate", action: clickedOnDownloadDelegate),
-      .init(title: "Download In background", action: clickedOnBackgroundDownload)
+      .init(title: "Networking", list: [
+        .init(title: "Data handler", action: clickedOnDataHandler),
+        .init(title: "Data Delegate", action: clickedOnDataDelegate),
+        .init(title: "Download handler", action: clickedOnDownloadHandler),
+        .init(title: "Download Delegate", action: clickedOnDownloadDelegate),
+        .init(title: "Download In background", action: clickedOnBackgroundDownload),
+      ]),
+      .init(title: "Logger", list: [
+        .init(title: "Test LogOneLine", action: LogOneLine),
+        .init(title: "Test LogMultiLines", action: LogMultiLines)
+      ])
     ]
     tableView.reloadData()
   }
@@ -30,6 +37,7 @@ private extension ViewController {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.showsVerticalScrollIndicator = false
+    tableView.contentInset = .init(top: 16, left: .zero, bottom: 16, right: .zero)
   }
 }
 
@@ -157,23 +165,33 @@ extension ViewController: UITableViewDelegate {
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let index = indexPath.row
-    listData[safe: index]?.action?()
+    let section = indexPath.section
+    listData[safe: section]?.list[safe: index]?.action?()
   }
 }
 
 // MARK: - UITableViewDataSource
 extension ViewController: UITableViewDataSource {
-  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+  func numberOfSections(in tableView: UITableView) -> Int {
     listData.count
+  }
+  
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    listData[safe: section]?.list.count ?? .zero
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell: UITableViewCell = UITableViewCell()
     let index = indexPath.row
-    let cellData = listData[safe: index]
+    let section = indexPath.section
+    let cellData = listData[safe: section]?.list[safe: index]
     cell.textLabel?.text = cellData?.title
     cell.selectionStyle = .none
     return cell
+  }
+  
+  func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+    listData[safe: section]?.title
   }
 }
 
@@ -194,4 +212,17 @@ extension ViewController: URLSessionDelegate {
     }
 }
 
-
+// MARK: - Logging View
+extension ViewController {
+  func LogOneLine() {
+    ASInspector.shared.log("Test Test", "AS")
+  }
+  
+  func LogMultiLines() {
+    var string = ""
+    for _ in 0...10 {
+      string += "\n" + "Tests AS logger"
+    }
+    ASInspector.shared.log(string)
+  }
+}

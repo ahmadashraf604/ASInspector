@@ -12,6 +12,7 @@ public class ASInspector {
   private let networkManager: NetworkManager
   private let uiManager: UIManager
   private var _isEnabled: Bool
+  private var _logInConsole: Bool
   
   init(
     networkManager: NetworkManager = .shared,
@@ -20,6 +21,7 @@ public class ASInspector {
     self.networkManager = networkManager
     self.uiManager = uiManager
     self._isEnabled = false
+    self._logInConsole = false
   }
 }
 
@@ -33,9 +35,37 @@ public extension ASInspector {
       newValue ? enableLogger() : disableLogger()
     }
   }
+  /// Enable and Disable Console Logging
+  var shouldLogInConsole: Bool {
+    get { _logInConsole }
+    set {
+      _logInConsole = newValue
+    }
+  }
   
   func clearAll() {
     networkManager.clearAll()
+  }
+  
+  func log(with level: LogLevel = .debug, _ logData: String...,
+           file: String = #file,
+           function: String = #function,
+           line: Int = #line
+           
+  ) {
+    let filename = URL(filePath: file).lastPathComponent
+    let log = LogData(
+      creationDate: Date(),
+      filename: filename,
+      function: function,
+      line: line,
+      log: logData.joined(separator: ", "),
+      level: level
+    )
+    LoggerManager.shared.save(log)
+    if (_logInConsole) {
+      Swift.print(log.description)
+    }
   }
 }
 

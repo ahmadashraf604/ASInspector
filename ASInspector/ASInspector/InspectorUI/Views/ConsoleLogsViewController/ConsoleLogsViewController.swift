@@ -1,18 +1,22 @@
 //
-//  NetworkLogsViewController.swift
+//  ConsoleLogsViewController.swift
 //  ASInspector
 //
-//  Created by Ahmed Ashraf on 08/01/2023.
+//  Created by Ahmed Ashraf on 18/03/2023.
+//  Copyright © 2023 Inspector. All rights reserved.
 //
 
 import UIKit
 
-class NetworkLogsViewController: BaseRootViewController {
+class ConsoleLogsViewController: BaseRootViewController {
+  // MARK: - IBOutlet
   @IBOutlet private weak var tableView: UITableView!
   
-  private let networkManager = NetworkManager.shared
-  private var logs: [NetworkRepresentable] = .empty
+  // MARK: - Properties
+  private let loggerManager = LoggerManager.shared
+  private var logs: [LogData] = .empty
   
+  // MARK: - Init
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
     super.init(nibName: nibNameOrNil, bundle: Bundle.current)
   }
@@ -23,45 +27,53 @@ class NetworkLogsViewController: BaseRootViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    headerView?.setTitle("Network Logs")
+    headerView?.setTitle("User Logs")
     configureTableView()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
     loadData()
   }
 }
 
 // MARK: - Private View Helper
-private extension NetworkLogsViewController {
+private extension ConsoleLogsViewController {
   func configureTableView() {
     tableView.delegate = self
     tableView.dataSource = self
     tableView.showsVerticalScrollIndicator = false
-    tableView.registerCellNib(NetworkTableViewCell.self)
+    tableView.registerCellNib(LogTableViewCell.self)
   }
 }
 
 // MARK: - Private Helpers
-extension NetworkLogsViewController {
+extension ConsoleLogsViewController {
   var logsCount: Int {
     logs.count
   }
   
-  func getLogData(at index: Int) -> NetworkRepresentable? {
+  func getLogData(at index: Int) -> LogData? {
     let cellData = logs[safe: index]
     return cellData
   }
   
   func loadData() {
-    logs = networkManager.logs
+    logs = loggerManager.fetchAllLogs()
     tableView.reloadData()
   }
 }
 
 // MARK: - UITableViewDelegate
-extension NetworkLogsViewController: UITableViewDelegate {
+extension ConsoleLogsViewController: UITableViewDelegate {
   
-//  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//    90
-//  }
+  func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    return UITableView.automaticDimension
+   }
+
+  func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+    return UITableView.automaticDimension
+   }
   
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let index = indexPath.row
@@ -70,14 +82,14 @@ extension NetworkLogsViewController: UITableViewDelegate {
 }
 
 // MARK: - UITableViewDataSource
-extension NetworkLogsViewController: UITableViewDataSource {
+extension ConsoleLogsViewController: UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     logsCount
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell: NetworkTableViewCell = tableView.dequeue(cellForItemAt: indexPath)
+    let cell: LogTableViewCell = tableView.dequeue(cellForItemAt: indexPath)
     let index = indexPath.row
     let cellData = getLogData(at: index)
     cell.configure(cellData)

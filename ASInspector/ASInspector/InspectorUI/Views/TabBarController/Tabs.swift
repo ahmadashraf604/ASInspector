@@ -22,7 +22,7 @@ enum Tabs {
       viewController = NetworkLogsViewController()
     case .consoleLogs:
       tabBarItem = UITabBarItem(title: "Console", image: AppImages.commandLineIcon, selectedImage: nil)
-      viewController = UIViewController()
+      viewController = ConsoleLogsViewController()
     case .settings:
       tabBarItem = UITabBarItem(title: "Setting", image: AppImages.settingsIcon, selectedImage: nil)
       viewController = UIViewController()

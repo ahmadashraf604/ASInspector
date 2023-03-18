@@ -17,6 +17,13 @@ class FileService {
     let queueLabel = (Bundle.main.bundleIdentifier ?? "") + ".FileService"
     self.queue = .init(label: queueLabel, qos: .userInteractive, attributes: .concurrent)
   }
+  
+  func getFile(_ fileName: String, withExtension fileExtension: FileExtension) -> URL? {
+    Bundle.current.url(
+      forResource: fileName,
+      withExtension: fileExtension.rawValue
+    )
+  }
 }
 
 // MARK: - FileServiceContract Confirmation

@@ -34,6 +34,6 @@ class UIBaseTabBarController: UITabBarController {
 // MARK: - UITabBarControllerDelegate
 extension UIBaseTabBarController: UITabBarControllerDelegate {
   override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-    print("didSelect \(item)")
+    // print("didSelect \(item)")
   }
 }

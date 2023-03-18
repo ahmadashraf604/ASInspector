@@ -11,3 +11,8 @@ struct ViewData {
   let title: String
   let action: (() -> Void)?
 }
+
+struct ViewSectionData {
+  let title: String
+  let list: [ViewData]
+}
