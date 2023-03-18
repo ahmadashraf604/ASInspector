@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
     s.name         = "ASInspector"
-    s.version      = "0.1.3"
+    s.version      = "0.1.4"
     s.summary      = "Network Logger and Console Logger"
     s.description  = <<-DESC 
     ASInspector is simple and extensible logger. It makes easy to log network request and response on file, Xcode console or send log to servers. It provides user friendly UI for debugging and testing purpose. 
