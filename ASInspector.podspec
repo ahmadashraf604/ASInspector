@@ -8,23 +8,24 @@ Pod::Spec.new do |s|
                      DESC
   
     s.homepage     = "https://github.com/ahmadashraf604/ASInspector"
-    s.screenshots  = "https://github.com/ahmadashraf604/ASInspector/blob/main/ASInspector.png"
+    s.screenshots  = "https://raw.githubusercontent.com/ahmadashraf604/ASInspector/main/ASInspector.png"
   
     s.license      = { :type => "MIT", :file => "LICENSE.md" }
   
     s.author             = { "Ahmed Ashraf" => "ahmadashraf604@gmail.com" }
-    s.social_media_url   = "https://www.linkedin.com/in/ahmadashraf604/"
+    # s.social_media_url   = "https://www.linkedin.com/in/ahmadashraf604/"
   
     s.platform     = :ios
     s.swift_version = '5.0'
     s.ios.deployment_target = "11.0"
     s.source       = { :git => "https://github.com/ahmadashraf604/ASInspector.git", :tag => "v#{s.version}" }
 
-    s.source_files  = "ASInspector/ASInspector/**/*.swift"
-    s.resources = "ASInspector/ASInspector/InspectorUI/**/*.{xcassets,storyboard,xib,xcdatamodeld,xcdatamodel}"
+    s.source_files  = "ASInspector/ASInspector/**/*.{swift,xcdatamodeld,xcdatamodel}"
+    s.resources = "ASInspector/ASInspector/**/*.{xcassets,storyboard,xib,xcdatamodeld,xcdatamodel}"
   
     s.requires_arc = true
   
-    s.frameworks = 'CoreData'
+    s.frameworks = 'UIKit', 'CoreData'
+    s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
   end
   
