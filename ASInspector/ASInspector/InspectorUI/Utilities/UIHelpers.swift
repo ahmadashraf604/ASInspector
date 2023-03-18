@@ -26,6 +26,7 @@ class UIHelpers {
     }
   }
   
+  @available(iOS 13.0, *)
   var windowScenes: [UIWindowScene] {
     let windowScenes = UIApplication.shared.connectedScenes
       .filter { $0.activationState == .foregroundActive }
@@ -33,6 +34,7 @@ class UIHelpers {
     return windowScenes
   }
   
+  @available(iOS 13.0, *)
   var windowScene: UIWindowScene? {
     windowScenes.first
   }

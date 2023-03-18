@@ -53,7 +53,7 @@ public extension ASInspector {
            line: Int = #line
            
   ) {
-    let filename = URL(filePath: file).lastPathComponent
+    let filename = URL(fileURLWithPath: file).lastPathComponent
     let log = LogData(
       creationDate: Date(),
       filename: filename,

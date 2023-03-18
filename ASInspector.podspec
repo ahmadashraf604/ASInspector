@@ -17,10 +17,10 @@ Pod::Spec.new do |s|
   
     s.platform     = :ios
     s.swift_version = '5.0'
-    s.ios.deployment_target = "9.0"
+    s.ios.deployment_target = "11.0"
     s.source       = { :git => "https://github.com/ahmadashraf604/ASInspector.git", :tag => "v#{s.version}" }
   
-    s.source_files  = "ASInspector/**/*.swift"
+    s.source_files  = "ASInspector/ASInspector/**/*.swift"
     s.resources = "ASInspector/ASInspector/InspectorUI/**/*.{xcassets,storyboard,xib}"
   
     s.requires_arc = true
