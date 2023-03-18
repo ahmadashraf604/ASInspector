@@ -67,8 +67,9 @@ extension ConsoleLogsViewController {
 // MARK: - UITableViewDelegate
 extension ConsoleLogsViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let index = indexPath.row
+//    let index = indexPath.row
 //    print(index)
+    
   }
 }
 
